@@ -5,6 +5,7 @@ import PublicPage from './../pages/PublicPage';
 import PrivatePage from './../pages/PrivatePage';
 import LoginPage from "../pages/LoginPage";
 import LoginLayout from "../layout/LoginLayout";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -21,7 +22,10 @@ const router = createBrowserRouter([
         },
         {
           path: "/private",
-          element: <PrivatePage/>
+          element: 
+          <PrivateRoute>
+            <PrivatePage/>
+          </PrivateRoute>
         },
         {
           // path: "/login",
